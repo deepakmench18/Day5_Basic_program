@@ -1,32 +1,26 @@
 package com.bridgelabz.utility;
+
 import java.util.Scanner;
+
 public class Utility {
 	Scanner scanner;
-	
-	 public Utility() {
-		 scanner = new Scanner(System.in);
-	 }
-	 public int getIntValue() {
-		 return scanner.nextInt();
-	 }
-	 // method to return flip coin percentile
-	 public void flipCoin(int numberOfFlip) {
-		 double heads =0,tails = 0;
-			for(int i = 0;i < numberOfFlip; i++) {
-			double side = Math.random();	
-			if(side>0.5) {
-				heads++;
-			}
-			else {
-				tails++;
-				}
-			}
-			System.out.println("Number of head occurance ::" + heads);
-			System.out.println("Number of tail occurance ::" + (numberOfFlip-heads));
-			double headPercent = ((heads * 100)/numberOfFlip);
-			double tailPercent = ((tails * 100)/numberOfFlip);
-			System.out.println("Heads Percentage ::" + headPercent + "%");
-			System.out.println("Tails Percentage ::" + tailPercent + "%");
-			}
+	public Utility()
+	{
+		scanner = new Scanner(System.in);
+	}
+	public int getIntvalue()
+	{
+		return scanner.nextInt();
+	}
+	public void remainder(int dividend, int divisor)
+	{
+		int X = dividend % divisor;
+		System.out.println(X);
+	}
+	public void Quotient(int dividend, int divisor)
+	{
+		int Y = dividend / divisor;
+		System.out.println(Y);
+	}
 
 }
