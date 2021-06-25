@@ -1,31 +1,32 @@
-package com.bridgelab.utility;
-
+package com.bridgelabz.utility;
 import java.util.Scanner;
-
 public class Utility {
-        Scanner scanner;
-        public utility() {
-        	scanner = new Scanner(System.in);
-        }
-        public int getIntValue() {
-        	return scanner.nextInt();
-        }
-        public void checkLeapYear(int ValueOfYear) {
-        	int temp = ValueOfYear , noOfDigit = 0;
-        	do {
-        		noOfDigit++;
-        		ValueOfYear = ValueOfYear/10;
-        	}while(ValueOfYear != 0);
-        	if (noOfDigit == 0) 
-        	{
-        		if ((temp % 4 == 0 || (temp % 400 == 0 && temp % 100 == 0)) {
-                     System.out.print.ln("Year is Leap:" + temp);
-        		}
-        		else {
-        			System.out.println("Year is Not Leap " + temp);
-        		} }
-        	else {
-        		System.out.println("Year is Invalid" + temp);
-        	}
-        }
+	Scanner scanner;
+	
+	 public Utility() {
+		 scanner = new Scanner(System.in);
+	 }
+	 public int getIntValue() {
+		 return scanner.nextInt();
+	 }
+	 // method to return flip coin percentile
+	 public void flipCoin(int numberOfFlip) {
+		 double heads =0,tails = 0;
+			for(int i = 0;i < numberOfFlip; i++) {
+			double side = Math.random();	
+			if(side>0.5) {
+				heads++;
+			}
+			else {
+				tails++;
+				}
+			}
+			System.out.println("Number of head occurance ::" + heads);
+			System.out.println("Number of tail occurance ::" + (numberOfFlip-heads));
+			double headPercent = ((heads * 100)/numberOfFlip);
+			double tailPercent = ((tails * 100)/numberOfFlip);
+			System.out.println("Heads Percentage ::" + headPercent + "%");
+			System.out.println("Tails Percentage ::" + tailPercent + "%");
+			}
+
 }
